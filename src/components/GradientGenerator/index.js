@@ -51,6 +51,7 @@ class GradientGenerator extends Component {
     } = this.state
     return (
       <Container
+        data-testid="gradientGenerator"
         firstColor={firstColor}
         secondColor={secondColor}
         direction={direction}
@@ -58,7 +59,7 @@ class GradientGenerator extends Component {
         <Card flexDirection="column">
           <h1>Generate a CSS Color Gradient</h1>
           <p>Choose Direction</p>
-          <Card>
+          <ul>
             {gradientDirectionsList.map(each => (
               <GradientDirectionItem
                 item={each}
@@ -67,7 +68,7 @@ class GradientGenerator extends Component {
                 onClickDirectionBtn={this.onClickDirectionBtn}
               />
             ))}
-          </Card>
+          </ul>
 
           <p>Pick the Colors</p>
 

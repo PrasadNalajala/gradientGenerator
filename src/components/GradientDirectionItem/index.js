@@ -8,9 +8,11 @@ const GradinetDirectionItem = props => {
   }
   const opacity = direction === value ? 1 : 0.5
   return (
-    <Button type="button" onClick={handleDirection} opacity={opacity}>
-      {displayText}
-    </Button>
+    <li>
+      <Button type="button" onClick={handleDirection} opacity={opacity}>
+        {displayText}
+      </Button>
+    </li>
   )
 }
 
